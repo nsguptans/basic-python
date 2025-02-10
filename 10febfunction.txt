@@ -1,0 +1,43 @@
+1.#create an array of employee with salary and display the employess whose salary is less than 50,000
+salary=np.array([20000,80000,12000,56000,10000,2000])
+less_50000 = salary[salary<50000]
+print("employee",less_50000)
+------------------------------------------------
+2. Suppose you have a dataset containing daily temperature readings for a city, and you want to identify days with extreme temperature conditions. Find days 
+where the temperature either exceeded 35 degrees Celsius (hot day) or dropped below 5 degrees Celsius (cold day). 
+
+Input:
+
+temperatures = np.array([32.5, 34.2, 36.8, 29.3, 31.0, 38.7, 23.1, 18.5, 22.8, 37.2,4,25,12,-4,-12])
+program :
+temperatures = np.array([32.5, 34.2, 36.8, 29.3, 31.0, 38.7, 23.1, 18.5, 22.8, 37.2, 4, 25, 12, -4, -12])
+
+# Find indices where temperature is above 35 (hot days) or below 5 (cold days)
+hot_days = np.where(temperatures > 35)[0]  # Indices of hot days
+cold_days = np.where(temperatures < 5)[0]  # Indices of cold days
+
+# Extract temperature values for these days
+hot_temperatures = temperatures[hot_days]
+cold_temperatures = temperatures[cold_days]
+
+# Display results
+print("Hot Days (Index, Temperature):", list(zip(hot_days, hot_temperatures)))
+print("Cold Days (Index, Temperature):", list(zip(cold_days, cold_temperatures)))
+--------------------------------------------------------------
+
+
+3. Suppose you have a dataset containing monthly sales data for a company, and you want to split this data into quarterly reports for analysis and reporting purposes. 
+
+Input: monthly_sales = np.array([120, 135, 148, 165, 180, 155, 168, 190, 205, 198, 210, 225])
+program
+# Given monthly sales data
+monthly_sales = np.array([120, 135, 148, 165, 180, 155, 168, 190, 205, 198, 210, 225])
+
+# Split the data into 4 equal parts (quarters)
+quarterly_sales = np.split(monthly_sales, 4)
+
+for i, quarter in enumerate(quarterly_sales, start=1):
+    print(f"Q{i} Sales: {quarter}")
+
+
+
