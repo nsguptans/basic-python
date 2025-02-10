@@ -1,0 +1,58 @@
+q.1   1.Convert the below list into a numpy array then display the array then display the first and last index and then multiply each element by
+ 2 and display the result.
+
+ Input: my_list = [1, 2, 3, 4, 5]
+ans:
+import numpy as np
+my_list=[1,2,3,4,5]
+#concert list to numpy array
+my_arr = np.array(my_list)
+print("original array")
+print(my_arr)
+#display first and last index value
+print("first index",my_arr[0])
+print("last index",my_arr[-1])
+#multiply each element by 2
+my_arr*=2
+print("after multiply by 2")
+print(my_arr)
+output:
+original array
+[1 2 3 4 5]
+first index 1
+last index 5
+after multiply by 2
+[ 2  4  6  8 10]
+Q.2 Use arange() to create an array starting from 0 to 20 with a step of 2.
+ans: my_array=np.arange(0,22,2)
+print(my_array)
+output:[ 0  2  4  6  8 10 12 14 16 18 20]
+Q.3 Create a NumPy array with values [10, 25, 5, 18, 30]. Find and print the maximum and minimum values in the array.
+my_arrayy=np.array([10,25,5,18,30])
+# find maximum value 
+max_value=np.max(my_arrayy)
+print("maximum value is:")
+print(max_value)
+#find minimum value
+min_value= np.min(my_arrayy)
+print("minimum value:")
+print(min_value)
+output:maximum value is:
+30
+minimum value:
+5
+Q.4 Create a NumPy array containing the numbers 1 to 10, then find the sum of all elements in the array.
+ans:my_array=np.arange(1,11)
+print("array")
+print(my_array)
+#sum of all element
+array_sum=np.sum(my_array)
+print("sum of arrya is:",array_sum)
+output:
+array
+[ 1  2  3  4  5  6  7  8  9 10]
+sum of arrya is: 55
+
+
+
+
